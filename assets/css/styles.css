@@ -19,13 +19,13 @@
       -> Copy the color mode (HSL)
   */
 
-  --hue: 162;
+  --hue: 0; /* Adjusted to red */
   --first-color: hsl(var(--hue), 100%, 40%);
   --first-color-alt: hsl(var(--hue), 56%, 35%);
-  --title-color: hsl(228, 8%, 95%);
-  --text-color: hsl(228, 8%, 65%);
-  --body-color: hsl(228, 15%, 20%);
-  --container-color: hsl(228, 15%, 15%);
+  --title-color: hsl(0, 0%, 90%); /* Grey */
+  --text-color: hsl(0, 0%, 70%); /* Lighter grey for text */
+  --body-color: hsl(0, 0%, 10%); /* Black */
+  --container-color: hsl(0, 0%, 5%); /* Even darker black for container */
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
