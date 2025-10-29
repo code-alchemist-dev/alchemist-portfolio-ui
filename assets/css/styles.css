@@ -390,6 +390,15 @@ svg {
   margin-block: 1rem 2rem;
 }
 
+.about__description p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.about__description p:last-child {
+  margin-bottom: 0;
+}
+
 .about__image {
   justify-self: center;
 }
