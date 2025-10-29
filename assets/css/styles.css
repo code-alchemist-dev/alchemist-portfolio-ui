@@ -390,6 +390,15 @@ svg {
   margin-block: 1rem 2rem;
 }
 
+.about__description p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.about__description p:last-child {
+  margin-bottom: 0;
+}
+
 .about__image {
   justify-self: center;
 }
@@ -493,6 +502,13 @@ svg {
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.projects__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .projects__img {
