@@ -376,3 +376,46 @@ form { display: grid; gap: 16px; }
 .prose { max-width: 760px; }
 .prose p { color: var(--muted); margin: 0 0 16px; }
 .prose p strong { color: var(--cream); }
+
+/* ---------- Hero atmosphere: alchemical symbol field + seal draw-in ---------- */
+.symbol-field {
+  position: absolute; inset: 0; pointer-events: none;
+  background: url('../img/symbols.svg') 0 0 / 360px 360px repeat;
+  opacity: 0.07;
+  -webkit-mask-image: radial-gradient(ellipse at 70% 40%, #000 0%, transparent 70%);
+  mask-image: radial-gradient(ellipse at 70% 40%, #000 0%, transparent 70%);
+}
+.seal-mark > * { stroke-dasharray: 200; stroke-dashoffset: 0; }
+.js .seal-mark > * { animation: draw 2.2s cubic-bezier(.6,.05,.3,1) both; }
+.js .seal-mark > :nth-child(2) { animation-delay: .25s; }
+.js .seal-mark > :nth-child(3) { animation-delay: .45s; }
+.js .seal-mark > :nth-child(n+4) { animation-delay: 1.1s; animation-duration: 1.2s; }
+.js .seal-spark { animation: spark 0.9s ease 2.1s both; transform-origin: 32px 22.5px; transform-box: view-box; }
+@keyframes draw { from { stroke-dashoffset: 200; } to { stroke-dashoffset: 0; } }
+@keyframes spark { 0% { opacity: 0; transform: scale(0.2); } 60% { opacity: 1; transform: scale(1.8); } 100% { opacity: 1; transform: scale(1); } }
+
+/* ---------- Card hover: a quiet gold glow ---------- */
+.case, .service, .ent, .card { transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease; }
+.case:hover, .service:hover, .ent:hover, .card:hover {
+  border-color: rgba(217, 174, 87, 0.45);
+  box-shadow: 0 0 0 1px rgba(217, 174, 87, 0.08), 0 18px 48px -24px rgba(217, 174, 87, 0.35);
+}
+.service:hover, .ent:hover { transform: translateY(-2px); }
+.service:hover .glyph, .case:hover .glyph { filter: drop-shadow(0 0 10px rgba(217, 174, 87, 0.45)); }
+
+/* ---------- Architecture diagrams ---------- */
+.diagram { margin: 26px 0 0; max-width: 520px; border: 1px solid var(--line); border-radius: 12px; padding: 18px 16px 10px; background: var(--ink); }
+.diagram svg { width: 100%; height: auto; overflow: visible; }
+.diagram figcaption { font: 500 12px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
+.dg-box { fill: var(--ink-3); stroke: #3a4352; stroke-width: 1; }
+.dg-core { stroke: var(--gold); fill: #1d1a14; }
+.dg-t { fill: var(--cream); font: 600 11.5px var(--sans); }
+.dg-s { fill: var(--muted); font: 500 10px var(--mono); }
+.dg-ln { stroke: var(--gold-dim); stroke-width: 1.2; fill: none; }
+.dg-head { fill: var(--gold-dim); }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .seal-mark > *, .js .seal-spark { animation: none; }
+  .case, .service, .ent, .card { transition: none; }
+  .service:hover, .ent:hover { transform: none; }
+}

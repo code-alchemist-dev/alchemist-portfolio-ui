@@ -21,6 +21,14 @@ A static site with no build step and no third-party requests.
 
 The contact form uses **Netlify Forms**, so no keys are needed in the page. Spam is filtered by a honeypot field.
 
+## Editing CSS or JS
+
+Pages load `styles.css` and `main.js` with a content hash (`?v=…`) so browsers can cache them for a year. After changing either file, run:
+
+```sh
+python3 tools/stamp-assets.py
+```
+
 ## Run locally
 
 ```sh

@@ -8,6 +8,7 @@
   <link rel="canonical" href="https://bright-mabuza.netlify.app/">
   <meta name="theme-color" content="#0E1116">
   <meta name="color-scheme" content="dark">
+  <meta name="author" content="Bright Mabuza">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Code Alchemist · Alchemia">
@@ -27,8 +28,8 @@
 
   <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <script src="/assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="/assets/css/styles.css?v=57ebe116fe">
+  <script src="/assets/js/main.js?v=28e9ac92ee" defer></script>
 
   <script type="application/ld+json">
   {
@@ -49,13 +50,27 @@
     "knowsAbout": ["TypeScript", "Java", "Spring Boot", "NestJS", "Next.js", "React", "Angular", "PostgreSQL", "Supabase", "DevOps"]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Alchemia",
+    "alternateName": "Code Alchemist",
+    "description": "Independent software engineering: web platforms, APIs and PostgreSQL systems for clients in Botswana and South Africa.",
+    "url": "https://bright-mabuza.netlify.app/",
+    "logo": "https://bright-mabuza.netlify.app/assets/img/icon-512.png",
+    "image": "https://bright-mabuza.netlify.app/assets/img/og-image.png",
+    "founder": { "@type": "Person", "name": "Bright Mabuza" },
+    "areaServed": [{ "@type": "Country", "name": "South Africa" }, { "@type": "Country", "name": "Botswana" }]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Code Alchemist, home">
+      <a class="brand" href="/">
         <img src="/assets/brand/mark.svg" alt="" width="38" height="38">
         <span>
           <span class="brand-name">Code Alchemist</span>
@@ -81,6 +96,7 @@
   <main id="main">
     <!-- ================= HERO ================= -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="symbol-field" aria-hidden="true"></div>
       <div class="container">
         <div class="hero-grid">
           <div>
@@ -109,14 +125,14 @@
                 </text>
               </g>
               <circle cx="200" cy="200" r="146" fill="none" stroke="#2A313C"/>
-              <g transform="translate(80 80) scale(3.75)" fill="none" stroke="#D9AE57" stroke-linecap="round" stroke-linejoin="round">
+              <g class="seal-mark" transform="translate(80 80) scale(3.75)" fill="none" stroke="#D9AE57" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="32" cy="32" r="29" stroke-width="1.2"/>
                 <circle cx="32" cy="32" r="25.6" stroke-width="0.45" opacity="0.5"/>
                 <path d="M32 8.5 L54 46.6 H10 Z" stroke-width="1.5"/>
                 <path d="M25.2 33 L21 37.6 L25.2 42.2" stroke-width="1.6"/>
                 <path d="M38.8 33 L43 37.6 L38.8 42.2" stroke-width="1.6"/>
                 <path d="M33.7 31.4 L30.3 43.8" stroke-width="1.6"/>
-                <circle cx="32" cy="22.5" r="1.6" fill="#D9AE57" stroke="none"/>
+                <circle class="seal-spark" cx="32" cy="22.5" r="1.6" fill="#D9AE57" stroke="none"/>
               </g>
             </svg>
           </div>
@@ -159,6 +175,7 @@
               <ul class="tags" aria-label="Technologies">
                 <li>TypeScript</li><li>NestJS</li><li>Next.js</li><li>Supabase</li><li>PostgreSQL</li><li>Playwright</li><li>Render</li><li>turbo monorepo</li>
               </ul>
+              <figure class="diagram"><svg viewBox="0 0 360 218" role="img" aria-labelledby="dg-mfw-t"><title id="dg-mfw-t">MyFinWell architecture: a website, client portal and staff panel, all Next.js, call one NestJS API, which uses rate limits, an email outbox and a Supabase PostgreSQL database with row-level security.</title><defs><marker id="dg-mfw-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 L8 4 L0 8 Z"/></marker></defs><rect class="dg-box" x="0" y="0" width="112" height="46" rx="8"/><text class="dg-t" x="56.0" y="20.0" text-anchor="middle">Website</text><text class="dg-s" x="56.0" y="35.0" text-anchor="middle">Next.js</text><rect class="dg-box" x="124" y="0" width="112" height="46" rx="8"/><text class="dg-t" x="180.0" y="20.0" text-anchor="middle">Client portal</text><text class="dg-s" x="180.0" y="35.0" text-anchor="middle">Next.js</text><rect class="dg-box" x="248" y="0" width="112" height="46" rx="8"/><text class="dg-t" x="304.0" y="20.0" text-anchor="middle">Staff panel</text><text class="dg-s" x="304.0" y="35.0" text-anchor="middle">Next.js</text><path class="dg-ln" d="M56 46 L150 82" marker-end="url(#dg-mfw-arrow)"/><path class="dg-ln" d="M180 46 L180 82" marker-end="url(#dg-mfw-arrow)"/><path class="dg-ln" d="M304 46 L210 82" marker-end="url(#dg-mfw-arrow)"/><rect class="dg-box dg-core" x="90" y="84" width="180" height="50" rx="8"/><text class="dg-t" x="180.0" y="106.0" text-anchor="middle">API</text><text class="dg-s" x="180.0" y="121.0" text-anchor="middle">NestJS · validation · RBAC</text><path class="dg-ln" d="M180 134 L180 166" marker-end="url(#dg-mfw-arrow)"/><rect class="dg-box dg-core" x="90" y="168" width="180" height="50" rx="8"/><text class="dg-t" x="180.0" y="190.0" text-anchor="middle">PostgreSQL</text><text class="dg-s" x="180.0" y="205.0" text-anchor="middle">Supabase · RLS</text><rect class="dg-box" x="0" y="92" width="78" height="34" rx="8"/><text class="dg-t" x="39.0" y="113.0" text-anchor="middle">Rate limits</text><path class="dg-ln" d="M90 109 L80 109" marker-end="url(#dg-mfw-arrow)"/><rect class="dg-box" x="282" y="92" width="78" height="34" rx="8"/><text class="dg-t" x="321.0" y="113.0" text-anchor="middle">Email outbox</text><path class="dg-ln" d="M270 109 L280 109" marker-end="url(#dg-mfw-arrow)"/></svg><figcaption>Architecture, simplified</figcaption></figure>
             </div>
           </article>
 
@@ -179,6 +196,7 @@
               <ul class="tags" aria-label="Technologies">
                 <li>Java</li><li>Spring</li><li>React</li><li>TypeScript</li><li>PostgreSQL</li><li>Supabase</li><li>GitHub Actions</li>
               </ul>
+              <figure class="diagram"><svg viewBox="0 0 360 218" role="img" aria-labelledby="dg-pred-t"><title id="dg-pred-t">PR-ED architecture: a React assessment app and a public website, a gateway, a Java Spring API and a Supabase PostgreSQL database, with self-hosted CI runners.</title><defs><marker id="dg-pred-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 L8 4 L0 8 Z"/></marker></defs><rect class="dg-box" x="0" y="0" width="170" height="46" rx="8"/><text class="dg-t" x="85.0" y="20.0" text-anchor="middle">Assessment app</text><text class="dg-s" x="85.0" y="35.0" text-anchor="middle">React · TypeScript</text><rect class="dg-box" x="190" y="0" width="170" height="46" rx="8"/><text class="dg-t" x="275.0" y="20.0" text-anchor="middle">Public website</text><text class="dg-s" x="275.0" y="35.0" text-anchor="middle">TypeScript</text><path class="dg-ln" d="M85 46 L160 82" marker-end="url(#dg-pred-arrow)"/><rect class="dg-box dg-core" x="90" y="84" width="180" height="50" rx="8"/><text class="dg-t" x="180.0" y="106.0" text-anchor="middle">API</text><text class="dg-s" x="180.0" y="121.0" text-anchor="middle">Java · Spring</text><path class="dg-ln" d="M180 134 L180 166" marker-end="url(#dg-pred-arrow)"/><rect class="dg-box dg-core" x="90" y="168" width="180" height="50" rx="8"/><text class="dg-t" x="180.0" y="190.0" text-anchor="middle">PostgreSQL</text><text class="dg-s" x="180.0" y="205.0" text-anchor="middle">Supabase</text><rect class="dg-box" x="282" y="92" width="78" height="34" rx="8"/><text class="dg-t" x="321.0" y="113.0" text-anchor="middle">CI runners</text><path class="dg-ln" d="M280 109 L272 109" marker-end="url(#dg-pred-arrow)"/><rect class="dg-box" x="0" y="92" width="78" height="34" rx="8"/><text class="dg-t" x="39.0" y="113.0" text-anchor="middle">Gateway</text><path class="dg-ln" d="M80 109 L88 109" marker-end="url(#dg-pred-arrow)"/></svg><figcaption>Architecture, simplified</figcaption></figure>
             </div>
           </article>
 
@@ -209,6 +227,7 @@
               <ul class="tags" aria-label="Technologies">
                 <li>Umami</li><li>PostgreSQL</li><li>Docker</li><li>Render</li>
               </ul>
+              <figure class="diagram"><svg viewBox="0 0 360 202" role="img" aria-labelledby="dg-ana-t"><title id="dg-ana-t">Analytics architecture: many client sites send cookieless events to one analytics service, with a team per client, backed by PostgreSQL.</title><defs><marker id="dg-ana-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="dg-head" d="M0 0 L8 4 L0 8 Z"/></marker></defs><rect class="dg-box" x="0" y="0" width="112" height="40" rx="8"/><text class="dg-t" x="56.0" y="24.0" text-anchor="middle">Client site A</text><rect class="dg-box" x="124" y="0" width="112" height="40" rx="8"/><text class="dg-t" x="180.0" y="24.0" text-anchor="middle">Client site B</text><rect class="dg-box" x="248" y="0" width="112" height="40" rx="8"/><text class="dg-t" x="304.0" y="24.0" text-anchor="middle">Client site C</text><path class="dg-ln" d="M56 40 L150 76" marker-end="url(#dg-ana-arrow)"/><path class="dg-ln" d="M180 40 L180 76" marker-end="url(#dg-ana-arrow)"/><path class="dg-ln" d="M304 40 L210 76" marker-end="url(#dg-ana-arrow)"/><rect class="dg-box dg-core" x="70" y="78" width="220" height="50" rx="8"/><text class="dg-t" x="180.0" y="100.0" text-anchor="middle">Analytics service</text><text class="dg-s" x="180.0" y="115.0" text-anchor="middle">cookieless tracker · one team per client</text><path class="dg-ln" d="M180 128 L180 160" marker-end="url(#dg-ana-arrow)"/><rect class="dg-box" x="110" y="162" width="140" height="40" rx="8"/><text class="dg-t" x="180.0" y="186.0" text-anchor="middle">PostgreSQL</text></svg><figcaption>Architecture, simplified</figcaption></figure>
             </div>
           </article>
         </div>
@@ -451,7 +470,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <a class="brand" href="/" aria-label="Code Alchemist, home"><img src="/assets/brand/mark.svg" alt="" width="30" height="30"><span class="brand-name brand-name-sm">Code Alchemist</span></a>
+      <a class="brand" href="/"><img src="/assets/brand/mark.svg" alt="" width="30" height="30"><span class="brand-name brand-name-sm">Code Alchemist</span></a>
       <p>© <span data-year>2026</span> Bright Mabuza · Alchemia</p>
       <ul>
         <li><a href="#stack">Stack</a></li>
