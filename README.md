@@ -17,13 +17,14 @@ A static site with no build step and no third-party requests.
 | `assets/js/main.js` | Mobile menu, section highlight, reveal and contact form (vanilla JS) |
 | `assets/brand/` | Logo source files (SVG). The text in the lockups is outlined, so they need no fonts |
 | `assets/fonts/` | Self-hosted fonts (SIL OFL, see `assets/fonts/LICENSE.md`) |
+| `tools/build.py` | Builds `dist/` for Netlify (public files only, stamped) |
 | `_headers` | Netlify security and caching headers (strict CSP: same-origin only, no inline scripts or styles) |
 
 The contact form uses **Netlify Forms**, so no keys are needed in the page. Spam is filtered by a honeypot field.
 
 ## Editing CSS or JS
 
-Pages load `styles.css` and `main.js` with a content hash (`?v=…`) so browsers can cache them for a year. Netlify runs the stamping on every deploy (`netlify.toml`), so the live site is always correct. Run it locally too, so the committed pages match:
+Pages load `styles.css` and `main.js` with a content hash (`?v=…`) so browsers can cache them for a year. Netlify runs `tools/build.py` on every deploy (`netlify.toml`): it copies only the public files into `dist/` and stamps them, so the live site is always correct and repo files are never served. Run the stamp locally too, so the committed pages match:
 
 ```sh
 python3 tools/stamp-assets.py
