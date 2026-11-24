@@ -48,8 +48,8 @@
       entries.forEach(function (en) {
         var a = byId[en.target.id];
         if (!a || !en.isIntersecting) return;
-        links.forEach(function (l) { l.removeAttribute('aria-current'); });
-        a.setAttribute('aria-current', 'true');
+        links.forEach(function (l) { l.classList.remove('is-current'); });
+        a.classList.add('is-current');
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
     Object.keys(byId).forEach(function (id) {
@@ -74,6 +74,7 @@
   // Contact form: Netlify Forms via fetch, with an announced status.
   var form = document.querySelector('form[name="contact"]');
   if (form) {
+    form.noValidate = true; // JS shows its own message; without JS the browser validates.
     var status = form.querySelector('.form-status');
     var button = form.querySelector('button[type="submit"]');
     form.addEventListener('submit', function (e) {
