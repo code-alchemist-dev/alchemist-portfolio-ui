@@ -1,6 +1,7 @@
-# Static site, no framework. The build step only stamps the CSS/JS URLs with a
-# content hash, so the one-year immutable cache in _headers can never serve a
-# stale file. Pages are published from the repo root.
+# Static site, no framework. tools/build.py copies only the public files into
+# dist/ and stamps the CSS/JS URLs with a content hash, so the one-year
+# immutable cache in _headers can never serve a stale file, and repo files
+# (README, LICENSE, tools, config) are never published.
 [build]
-  publish = "."
-  command = "python3 tools/stamp-assets.py"
+  publish = "dist"
+  command = "python3 tools/build.py"
