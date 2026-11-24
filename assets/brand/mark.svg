@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t">
+  <title id="t">Code Alchemist</title>
+  <g fill="none" stroke="#D9AE57" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="32" cy="32" r="29" stroke-width="2"/>
+    <circle cx="32" cy="32" r="25.6" stroke-width="0.7" opacity="0.5"/>
+    <path d="M32 8.5 L54 46.6 H10 Z" stroke-width="2.2"/>
+    <path d="M25.2 33 L21 37.6 L25.2 42.2" stroke-width="2.3"/>
+    <path d="M38.8 33 L43 37.6 L38.8 42.2" stroke-width="2.3"/>
+    <path d="M33.7 31.4 L30.3 43.8" stroke-width="2.3"/>
+  </g>
+  <circle cx="32" cy="22.5" r="2.1" fill="#D9AE57"/>
+</svg>

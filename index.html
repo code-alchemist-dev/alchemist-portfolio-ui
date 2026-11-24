@@ -1,488 +1,463 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="en-ZA">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bright Mabuza - Full-Stack Software Engineer with 6+ years experience in Java, Spring Boot, Angular, and DevOps. Building scalable enterprise applications at Entelect and Standard Bank.">
-  <meta name="keywords" content="Software Engineer, Full-Stack Developer, Java, Spring Boot, Angular, TypeScript, DevOps, Microservices, South Africa">
-  <meta name="author" content="Bright Mabuza">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bright Mabuza · Code Alchemist — full-stack software engineer</title>
+  <meta name="description" content="Bright Mabuza (Code Alchemist, Alchemia) is a full-stack software engineer in South Africa: enterprise banking platforms at Capitec and Standard Bank through Entelect, and product builds for clients in Botswana and South Africa.">
+  <link rel="canonical" href="https://bright-mabuza.netlify.app/">
+  <meta name="theme-color" content="#0E1116">
+  <meta name="color-scheme" content="dark">
 
-  <!--=============== FAVICON ===============-->
-  <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Code Alchemist · Alchemia">
+  <meta property="og:title" content="Bright Mabuza · Code Alchemist">
+  <meta property="og:description" content="Full-stack software engineer. Enterprise banking platforms, and product builds from first sketch to production.">
+  <meta property="og:url" content="https://bright-mabuza.netlify.app/">
+  <meta property="og:image" content="https://bright-mabuza.netlify.app/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Code Alchemist logo: a gold circle and triangle around code brackets, with the words Code Alchemist, Alchemia, Bright Mabuza.">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <!--=============== REMIXICONS ===============-->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-  <!--=============== CSS ===============-->
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="preload" href="/assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="/assets/js/main.js" defer></script>
 
-  <title>Bright Mabuza - Full-Stack Software Engineer | Portfolio</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bright Mabuza",
+    "alternateName": "Code Alchemist",
+    "jobTitle": "Full-stack software engineer",
+    "url": "https://bright-mabuza.netlify.app/",
+    "image": "https://bright-mabuza.netlify.app/assets/img/bright-mabuza.webp",
+    "worksFor": { "@type": "Organization", "name": "Entelect" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Johannesburg" },
+    "address": { "@type": "PostalAddress", "addressCountry": "ZA" },
+    "sameAs": [
+      "https://github.com/code-alchemist-dev",
+      "https://www.linkedin.com/in/bright-mabuza-08697383/"
+    ],
+    "knowsAbout": ["TypeScript", "Java", "Spring Boot", "NestJS", "Next.js", "React", "Angular", "PostgreSQL", "Supabase", "DevOps"]
+  }
+  </script>
 </head>
-
 <body>
-  <!--==================== HEADER ====================-->
-  <header class="header" id="header">
-    <nav class="nav container">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-      <a href="#home" class="nav__logo">
-        Bright <span>Mabuza</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Code Alchemist, home">
+        <img src="/assets/brand/mark.svg" alt="" width="38" height="38">
+        <span>
+          <span class="brand-name">Code Alchemist</span>
+          <span class="brand-sub">ALCHEMIA · BRIGHT MABUZA</span>
+        </span>
       </a>
-
-      <div class="nav__menu" id="nav-menu">
-
-        <ul class="nav__list">
-
-          <li class="nav__item">
-            <a href="#home" class="nav__link active-link">Home</a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#experience" class="nav__link">Experience</a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#services" class="nav__link">Services</a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#projects" class="nav__link">Projects</a>
-          </li>
-
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="i-open" d="M4 7h16M4 12h16M4 17h16"/><path class="i-close" d="M6 6l12 12M18 6L6 18" hidden/></svg>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#enterprise">Enterprise</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#method">Method</a></li>
+          <li><a href="#about">About</a></li>
         </ul>
-        <div class="nav__close" id="nav-close">
-          <i class="ri-close-fill"></i>
-        </div>
-      </div>
-      <div class="nav__toggle" id="nav-toggle">
-        <i class="ri-menu-line"></i>
-      </div>
-    </nav>
+        <a class="btn btn-gold btn-sm" href="#contact">Work with me</a>
+      </nav>
+    </div>
   </header>
 
-  <!--==================== MAIN ====================-->
-  <main class="main">
-    <!--==================== HOME ====================-->
-    <section class="home section" id="home">
-      <div class="home__container container grid">
-        <div class="home__content">
-          <div class="home__data">
-            <h3 class="home__subtitle">
-              Hello,<span> I'm</span>
-            </h3>
-            <h1 class="home__title">
-              Bright Mabuza
-            </h1>
-            <h3 class="home__education">
-              Software Engineer
-            </h3>
-            <p class="home__description">
-              Passionate Full-Stack Software Engineer with 6+ years of experience building scalable applications.
-              Specialized in Java, Spring Boot, Angular, and cloud technologies. Currently delivering innovative
-              solutions at Entelect and Standard Bank, transforming complex business requirements into robust,
-              production-ready systems.
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Full-stack software engineer · South Africa</p>
+            <h1 id="hero-title">Turning complex problems into software <em>that holds.</em></h1>
+            <p class="hero-lede">
+              I’m <strong>Bright Mabuza</strong>. I build software for banks and for growing businesses:
+              enterprise platforms at <strong>Capitec</strong> and <strong>Standard Bank</strong> through Entelect,
+              and, as <strong>Alchemia</strong>, complete products for clients in Botswana and South Africa,
+              from the first sketch to production.
             </p>
-            <a href="./assets/documents/Bright Mabuza CV.pdf" class="button">Download CV</a>
+            <div class="hero-ctas">
+              <a class="btn btn-gold" href="#contact">Work with me</a>
+              <a class="btn btn-ghost" href="#work">See the work</a>
+            </div>
+            <p class="availability"><span class="dot" aria-hidden="true"></span>Open to consulting projects and senior engineering roles.</p>
           </div>
-          <div class="home__social">
-            <a href="https://github.com/code-alchemist-dev" target="_blank" class="home__social-link">
-              <i class="ri-github-fill"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/bright-mabuza-08697383/" target="_blank" class="home__social-link">
-              <i class="ri-linkedin-box-fill"></i>
-            </a>
+
+          <div class="hero-seal" aria-hidden="true">
+            <svg viewBox="0 0 400 400">
+              <defs><path id="ring-path" d="M200,200 m-168,0 a168,168 0 1,1 336,0 a168,168 0 1,1 -336,0"/></defs>
+              <g class="ring">
+                <circle cx="200" cy="200" r="190" fill="none" stroke="#2A313C"/>
+                <text font-family="Cormorant Garamond, Georgia, serif" font-size="17" letter-spacing="7" fill="#9C7D3F">
+                  <textPath href="#ring-path">SOLVE ET COAGULA · CODE · DATA · INFRASTRUCTURE · SECURITY ·</textPath>
+                </text>
+              </g>
+              <circle cx="200" cy="200" r="146" fill="none" stroke="#2A313C"/>
+              <g transform="translate(80 80) scale(3.75)" fill="none" stroke="#D9AE57" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="32" cy="32" r="29" stroke-width="1.2"/>
+                <circle cx="32" cy="32" r="25.6" stroke-width="0.45" opacity="0.5"/>
+                <path d="M32 8.5 L54 46.6 H10 Z" stroke-width="1.5"/>
+                <path d="M25.2 33 L21 37.6 L25.2 42.2" stroke-width="1.6"/>
+                <path d="M38.8 33 L43 37.6 L38.8 42.2" stroke-width="1.6"/>
+                <path d="M33.7 31.4 L30.3 43.8" stroke-width="1.6"/>
+                <circle cx="32" cy="22.5" r="1.6" fill="#D9AE57" stroke="none"/>
+              </g>
+            </svg>
           </div>
         </div>
-        <div class="home__image">
-          <svg class="home__blob" viewBox="0 0 550 591" xmlns="http://www.w3.org/2000/svg">
-            <mask id="maskBlob" mask-type="alpha">
-              <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
-               170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
-               447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
-               587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
-               438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z" />
-            </mask>
-            <g mask="url(#maskBlob)">
-              <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
-               170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
-               447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
-               587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
-               438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z" />
 
-              <rect x="37" width="476" height="630" fill="url(#pattern0)" />
-            </g>
+        <ul class="facts">
+          <li><b>2018</b><span>Shipping production software since</span></li>
+          <li><b>4</b><span>Enterprise clients: Capitec, Standard Bank, UD Trucks, OneCart</span></li>
+          <li><b>10+</b><span>Client products built with DataTank</span></li>
+          <li><b>2</b><span>Markets: Botswana and South Africa</span></li>
+        </ul>
+      </div>
+    </section>
 
-            <rect x="37" width="476" height="300" fill="url(#pattern1)" />
+    <!-- ================= WORK ================= -->
+    <section id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Products built <em>end to end</em></h2>
+          <p>Independent work as Alchemia, as delivery partner to DataTank BI Solutions: the architecture, the code, the database, the pipelines and the hand-over.</p>
+        </div>
 
-            <defs>
-              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)" />
-              </pattern>
+        <div class="work-list">
+          <article class="case reveal" aria-labelledby="c-mfw">
+            <div class="case-meta">
+              <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20"/><path d="M12 30l8-8 6 6 10-12"/><path d="M30 16h6v6"/></svg>
+              <h3 id="c-mfw">MyFinWell</h3>
+              <p class="client">Fintech · Botswana &amp; South Africa</p>
+              <span class="status">2026 · in client acceptance testing</span>
+            </div>
+            <div class="case-body">
+              <p><strong>A financial-wellness and debt-rehabilitation platform.</strong> Many working households lose most of their salary to loan deductions before payday. MyFinWell assesses each household’s position, has a trained analyst review it, and then guides rehabilitation, reintegration into formal credit, and protection.</p>
+              <ul>
+                <li>Three front ends on one API: the public website, a client portal (financial assessment, documents, payments with per-country VAT, recorded consents) and a staff panel.</li>
+                <li>A full analyst pipeline: public application, review checklist and interviews, a single-use offer link, activation, case queues with due dates, and notifications that carry no client data.</li>
+                <li>A NestJS API on Supabase Postgres with 100+ versioned migrations, row-level security, a transactional email outbox, and rate limiting that falls back safely when Redis is down.</li>
+                <li>Privacy and data-protection pages, cookieless analytics, and security scanning on every pull request.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies">
+                <li>TypeScript</li><li>NestJS</li><li>Next.js</li><li>Supabase</li><li>PostgreSQL</li><li>Playwright</li><li>Render</li><li>turbo monorepo</li>
+              </ul>
+            </div>
+          </article>
 
-              <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
-                <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)" />
-              </pattern>
+          <article class="case reveal" aria-labelledby="c-pred">
+            <div class="case-meta">
+              <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 40V18l16-10 16 10v22"/><path d="M8 40h32"/><path d="M18 40V28h12v12"/><path d="M20 20h8"/></svg>
+              <h3 id="c-pred">PR-ED Institute</h3>
+              <p class="client">Professional body · built environment</p>
+              <span class="status">2026 · active development</span>
+            </div>
+            <div class="case-body">
+              <p><strong>A competency-assessment platform for construction professionals.</strong> It assesses Construction Project Managers and Construction Managers against the SACPCMP competency frameworks.</p>
+              <ul>
+                <li>A Java and Spring API with a full integration suite, a React and TypeScript web app, and the institute’s public website.</li>
+                <li>Shared platform pieces: a gateway and a design system, so the products stay consistent.</li>
+                <li>Self-hosted CI runners, so the full test suite runs on every change at no extra cost.</li>
+              </ul>
+              <ul class="tags" aria-label="Technologies">
+                <li>Java</li><li>Spring</li><li>React</li><li>TypeScript</li><li>PostgreSQL</li><li>Supabase</li><li>GitHub Actions</li>
+              </ul>
+            </div>
+          </article>
 
-              <!-- Insert your profile (recommended size: 640 x 940) -->
-              <image class="home__img" id="imageBlob" width="640" height="925" href="/assets/img/20220331_165200.png" />
-            </defs>
-          </svg>
+          <article class="case reveal" aria-labelledby="c-bei">
+            <div class="case-meta">
+              <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="10" width="34" height="30" rx="3"/><path d="M7 18h34M16 6v8M32 6v8"/><path d="M15 26h6M15 32h12"/></svg>
+              <h3 id="c-bei">Built Environment Indaba</h3>
+              <p class="client">Conference · events</p>
+              <span class="status">2026</span>
+            </div>
+            <div class="case-body">
+              <p><strong>The conference’s web service and admin layer:</strong> a modern React app on Supabase, with a Python service behind it.</p>
+              <ul class="tags" aria-label="Technologies">
+                <li>React 19</li><li>Vite</li><li>Tailwind CSS 4</li><li>Supabase</li><li>Python</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="case reveal" aria-labelledby="c-an">
+            <div class="case-meta">
+              <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 40V8"/><path d="M8 40h32"/><path d="M14 32v-8M22 32V16M30 32v-12M38 32v-4"/></svg>
+              <h3 id="c-an">DataTank Analytics</h3>
+              <p class="client">Shared service · all DataTank clients</p>
+              <span class="status">2026 · live</span>
+            </div>
+            <div class="case-body">
+              <p><strong>Privacy-first website analytics for every client site.</strong> One cookieless deployment gives each client its own team and dashboards, with conversion funnels and campaign tracking, and no cookie banner needed.</p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Umami</li><li>PostgreSQL</li><li>Docker</li><li>Render</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="more-clients reveal">
+          <p>Also built with DataTank:</p>
+          <ul>
+            <li>Techplo</li><li>BBCBE</li><li>Toshiba TV South Africa</li><li>Audrey Academy</li><li>DTE</li><li>A digital marketplace</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!--==================== ABOUT ====================-->
-    <section class="about section" id="about">
-      <div class="about__container container grid">
-        <div class="about__data">
-          <h3 class="section__subtitle">
-            Know <span>More</span>
-          </h3>
-          <h2 class="section__title">About Me</h2>
-          <div class="about__description">
-            <p>I am a results-driven software engineer with a proven track record of delivering high-quality
-              solutions in enterprise environments. With a B.Sc. in Computer Science from the University of
-              Johannesburg and over 6 years of professional experience, I specialize in full-stack development,
-              microservices architecture, and DevOps practices.
-            </p>
-            <p>My expertise spans across backend development with Java and Spring Boot, frontend engineering
-              with Angular and TypeScript, and creating efficient CI/CD pipelines. I'm passionate about writing
-              clean, maintainable code and continuously learning new technologies to deliver innovative solutions
-              that drive business value.
-            </p>
-          </div>
+    <!-- ================= ENTERPRISE ================= -->
+    <section id="enterprise" aria-labelledby="ent-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Enterprise</p>
+          <h2 id="ent-title">Banking-grade <em>engineering</em></h2>
+          <p>Since 2020 I’ve worked at Entelect, placed with major South African banks on systems that millions of customers depend on.</p>
         </div>
-
-        <div class="about__image">
-          <svg class="about__blob" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <mask id="maskBorder" mask-type="alpha">
-              <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 
-               171.822C508.583 176.109 513.157 184.032 513.157 192.606V439.894C513.157 
-               448.468 508.583 456.391 501.157 460.678L287 584.322C279.574 588.609 
-               270.426 588.609 263 584.322L48.843 460.678C41.4174 456.391 36.843 448.468 36.843 
-               439.894V192.606C36.843 184.032 41.4174 176.109 48.843 171.822L263 48.1782Z" fill="black" />
-            </mask>
-            <g mask="url(#maskBorder)">
-              <rect x="37" width="476" height="630" fill="url(#pattern2)" />
-
-              <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 
-               192.606V439.894C509.157 447.039 505.345 453.641 499.157 457.214L285 
-               580.858C278.812 584.43 271.188 584.43 265 580.858L50.843 457.214C44.655 453.641 
-               40.843 447.039 40.843 439.894V192.606C40.843 185.461 44.655 178.859 50.843 
-               175.286L265 51.6423C271.188 48.0697 278.812 48.0696 285 51.6423Z" stroke="black" stroke-width="10" />
-            </g>
-
-            <rect x="37" width="476" height="300" fill="url(#pattern3)" />
-
-            <defs>
-              <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
-                <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)" />
-              </pattern>
-
-              <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
-                <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)" />
-              </pattern>
-
-              <!-- Insert your profile (recommended size: 640 x 940) -->
-              <image class="about__img" id="imageBorder" width="640" height="940"
-                href="assets/img/20220331_165200.png" />
-            </defs>
-          </svg>
-        </div>
-      </div>
-      <div class="container grid">
-        <div class="details__container">
-          <div class="about__detail">
-            <img src="./assets/img/education.png" alt="Education icon" class="about__icon" />
-            <h2 class="section__title">Education</h2>
-            <h3 class="section__subtitle">
-              University of Johannesburg <br>
-              <span>B.Sc. Computer Science and Informatics</span>
-            </h3>
-          </div>
-          <div class="about__detail">
-            <img src="./assets/img/experience.png" alt="Experience icon" class="about__icon" />
-            <h2 class="section__title">Experience</h2>
-            <h3 class="section__subtitle">
-              6+ years <br>
-              <span>Software Engineer</span>
-            </h3>
-          </div>
+        <div class="enterprise">
+          <article class="ent reveal">
+            <span class="when">NOW</span>
+            <h3>Capitec</h3>
+            <p class="via">Software engineer · through Entelect</p>
+            <p>Engineering on one of South Africa’s largest retail banks.</p>
+          </article>
+          <article class="ent reveal">
+            <span class="when">2023 –</span>
+            <h3>Standard Bank · MyUpdates</h3>
+            <p class="via">SBG Digital · through Entelect</p>
+            <p>Architecture, design and delivery of new features on SBG Digital’s MyUpdates platform, plus service monitoring and production troubleshooting.</p>
+            <ul class="tags" aria-label="Technologies"><li>Java</li><li>Spring</li><li>JBoss</li><li>Open Liberty</li><li>OpenShift</li><li>Chef</li></ul>
+          </article>
+          <article class="ent reveal">
+            <span class="when">2020 – 2023</span>
+            <h3>Standard Bank · Digital Lifestyle</h3>
+            <p class="via">Through Entelect</p>
+            <p>Architecture and delivery of new features. Project lead for two developers on a mobile-network (MNO) web application.</p>
+            <ul class="tags" aria-label="Technologies"><li>Java 11</li><li>Spring Boot</li><li>Angular</li><li>Liquibase</li><li>PostgreSQL</li><li>SonarQube</li></ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <!--==================== Experience ====================-->
-    <section class="experience section" id="experience">
-      <div class="experience__container container grid">
-
-        <div class="experience__data">
-          <h3 class="section__subtitle">
-            Explore<span> My</span>
-          </h3>
-          <h2 class="section__title">
-            Experience
-          </h2>
-          <p class="experience__description">
-            I am a software engineer with over 6 years of experience in creating robust applications. Currently, I work
-            at Entelect, where I tackle a variety of development challenges. In addition to my role at Entelect, I have
-            been consulting at Standard Bank for more than 4 years, contributing to various projects and enhancing their
-            technical infrastructure.
-          </p>
-          <a href="#projects" class="button">
-            See Projects
-          </a>
+    <!-- ================= SERVICES ================= -->
+    <section id="services" aria-labelledby="svc-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Services</p>
+          <h2 id="svc-title">What I can <em>build for you</em></h2>
+          <p>For founders, agencies and teams that need a senior engineer who owns the whole stack.</p>
         </div>
-
-        <div class="experience__content">
-          <ol class="experience__group">
-            <li class="experience__item">
-              Java
-            </li>
-            <li class="experience__item">
-              TypeScript
-            </li>
-            <li class="experience__item">
-              Python
-            </li>
-            <li class="experience__item">
-              C#
-            </li>
-            <li class="experience__item">
-              Dart
-            </li>
-          </ol>
-          <ol class="experience__group" start="6">
-            <li class="experience__item">
-              Spring Boot
-            </li>
-            <li class="experience__item">
-              Spring Framework
-            </li>
-            <li class="experience__item">
-              Angular
-            </li>
-            <li class="experience__item">
-              .NET
-            </li>
-            <li class="experience__item">
-              Flutter
-            </li>
-          </ol>
-          <ol class="experience__group" start="11">
-            <li class="experience__item">
-              Docker
-            </li>
-            <li class="experience__item">
-              Kubernetes
-            </li>
-            <li class="experience__item">
-              CI/CD
-            </li>
-            <li class="experience__item">
-              Microservices
-            </li>
-            <li class="experience__item">
-              REST APIs
-            </li>
-          </ol>
+        <div class="services">
+          <article class="service reveal">
+            <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 4L44 40H4Z"/><path d="M19 26l-4 4 4 4M29 26l4 4-4 4"/></svg>
+            <h3>Product builds</h3>
+            <p>Web platforms from idea to launch: Next.js and React front ends, NestJS or Spring APIs, and a PostgreSQL model designed to last.</p>
+          </article>
+          <article class="service reveal">
+            <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 4l16 6v12c0 10-7 17-16 22C15 39 8 32 8 22V10Z"/><path d="M17 24l5 5 9-10"/></svg>
+            <h3>Security &amp; privacy</h3>
+            <p>Row-level security, consent records, data-protection pages (POPIA and the Botswana DPA), dependency and secret scanning, and pinned CI.</p>
+          </article>
+          <article class="service reveal">
+            <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="6"/><path d="M24 4v8M24 36v8M4 24h8M36 24h8M10 10l6 6M32 32l6 6M38 10l-6 6M16 32l-6 6"/></svg>
+            <h3>Delivery pipelines</h3>
+            <p>CI/CD with tests against real databases, self-hosted runners, preview and test environments, monitoring, alerts and backups.</p>
+          </article>
+          <article class="service reveal">
+            <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 40V8"/><path d="M6 40h36"/><path d="M12 32l9-10 7 6 12-14"/></svg>
+            <h3>Privacy-first analytics</h3>
+            <p>Cookieless analytics with funnels and campaign tracking that respect visitors and still answer the business’s questions.</p>
+          </article>
+          <article class="service reveal">
+            <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="8" width="36" height="26" rx="3"/><path d="M16 42h16M24 34v8"/><path d="M14 18h10M14 24h20"/></svg>
+            <h3>Enterprise Java &amp; Angular</h3>
+            <p>Feature delivery and modernisation on Spring and Angular estates, with the discipline banks expect.</p>
+          </article>
+          <article class="service reveal">
+            <svg class="glyph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="16" cy="18" r="6"/><circle cx="32" cy="30" r="6"/><path d="M21 21l6 6"/><path d="M8 40c2-5 5-8 8-8M40 8c-2 5-5 8-8 8"/></svg>
+            <h3>AI-assisted delivery</h3>
+            <p>A build-and-review workflow: AI agents write and independently review every change, held to the same tests and checks as any engineer.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!--==================== SERVICES ====================-->
-    <section class="services section" id="services">
-      <h3 class="section__subtitle">
-        My <span>Services</span>
-      </h3>
-      <h2 class="section__title">
-        What I do
-      </h2>
-      <div class="services__container container grid">
-        <article class="services__card">
-          <i class="ri-service-line services__icon"></i>
-          <h2 class="services__title">
-            Backend Development
-          </h2>
-          <p class="service__description">
-            Architecting robust, scalable server-side solutions with Java, Spring Boot, and microservices.
-            Expertise in RESTful API design, database optimization, and implementing secure, high-performance
-            systems that power modern applications. Focused on clean code architecture and best practices.
-          </p>
-        </article>
-        <article class="services__card">
-          <i class="ri-service-fill services__icon"></i>
-          <h2 class="services__title">
-            Frontend Development
-          </h2>
-          <p class="service__description">
-            Creating responsive, intuitive user interfaces with Angular and TypeScript. Proficient in modern
-            web technologies, component-based architecture, and state management with NgRx. Delivering
-            exceptional user experiences through clean, maintainable code and attention to design details.
-          </p>
-        </article>
-        <article class="services__card">
-          <i class="ri-pushpin-line services__icon"></i>
-          <h2 class="services__title">
-            DevOps & CI/CD
-          </h2>
-          <p class="service__description">
-            Streamlining development workflows with Docker, Kubernetes, and automated CI/CD pipelines.
-            Implementing infrastructure as code, continuous integration, and deployment strategies that
-            enhance team productivity and ensure reliable, rapid software delivery to production.
-          </p>
+    <!-- ================= METHOD ================= -->
+    <section id="method" aria-labelledby="method-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Method</p>
+          <h2 id="method-title">The Great Work, <em>in four stages</em></h2>
+          <p>Alchemists described transformation in four colours. It’s a fair map of how a messy brief becomes dependable software.</p>
+        </div>
+        <ol class="stages reveal">
+          <li class="stage s-nigredo"><div class="swatch" aria-hidden="true"></div><span class="latin">Nigredo</span><h3>Understand</h3><p>Break the problem down to what’s really there: the people, the rules, the data and the constraints. Find the hard parts early.</p></li>
+          <li class="stage s-albedo"><div class="swatch" aria-hidden="true"></div><span class="latin">Albedo</span><h3>Clarify</h3><p>Design the data model, the API and the journeys. Write down the decisions and confirm the open questions with the client.</p></li>
+          <li class="stage s-citrinitas"><div class="swatch" aria-hidden="true"></div><span class="latin">Citrinitas</span><h3>Build</h3><p>Small, reviewed pull requests. Tests against a real database. Each step is deployed to a test environment and checked there.</p></li>
+          <li class="stage s-rubedo"><div class="swatch" aria-hidden="true"></div><span class="latin">Rubedo</span><h3>Harden &amp; ship</h3><p>Security scans, monitoring, backups and runbooks, then a calm release and a clean hand-over.</p></li>
+        </ol>
+        <ul class="principles reveal">
+          <li><strong>Every change is reviewed.</strong> Nothing merges without an independent review and green CI.</li>
+          <li><strong>Real databases in tests.</strong> Migrations and access rules are tested, not assumed.</li>
+          <li><strong>Privacy by default.</strong> Collect less, keep it shorter, and never send personal data in notifications.</li>
+          <li><strong>Written down.</strong> Decisions, runbooks and hand-over notes are part of the delivery.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= STACK ================= -->
+    <section id="stack" aria-labelledby="stack-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Stack</p>
+          <h2 id="stack-title">Tools of <em>the trade</em></h2>
+        </div>
+        <div class="stack reveal">
+          <div class="stack-group"><h3>Languages</h3><ul class="tags"><li>TypeScript</li><li>JavaScript</li><li>Java</li><li>SQL</li><li>Python</li></ul></div>
+          <div class="stack-group"><h3>Front end</h3><ul class="tags"><li>React</li><li>Next.js</li><li>Vite</li><li>Tailwind CSS</li><li>Angular</li></ul></div>
+          <div class="stack-group"><h3>Back end</h3><ul class="tags"><li>NestJS</li><li>Fastify</li><li>Express</li><li>Spring Boot</li><li>Prisma</li></ul></div>
+          <div class="stack-group"><h3>Data</h3><ul class="tags"><li>PostgreSQL</li><li>Supabase</li><li>Row-level security</li><li>Redis</li><li>Liquibase</li></ul></div>
+          <div class="stack-group"><h3>Quality &amp; security</h3><ul class="tags"><li>Vitest</li><li>Playwright</li><li>Semgrep</li><li>gitleaks</li><li>Dependabot</li><li>SonarQube</li></ul></div>
+          <div class="stack-group"><h3>Delivery</h3><ul class="tags"><li>Docker</li><li>GitHub Actions</li><li>Render</li><li>Vercel</li><li>Netlify</li><li>OpenShift</li></ul></div>
+        </div>
+        <details class="earlier reveal">
+          <summary>Earlier experience</summary>
+          <ul class="tags"><li>C# / .NET</li><li>MS SQL Server</li><li>Azure</li><li>OAuth2</li><li>Qlik Sense</li><li>JBoss</li><li>Open Liberty</li><li>IBM DB2</li><li>Chef</li><li>Bamboo</li><li>Nexus</li><li>Dart / Flutter</li><li>Kubernetes (k3s)</li></ul>
+        </details>
+      </div>
+    </section>
+
+    <!-- ================= OPEN SOURCE & LAB ================= -->
+    <section id="open-source" aria-labelledby="os-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Open source &amp; lab</p>
+          <h2 id="os-title">Things I <em>share</em></h2>
+        </div>
+        <div class="two-col">
+          <article class="card reveal">
+            <p class="kicker">Node.js SDK</p>
+            <h3>Omnichannel Chatbot SDK</h3>
+            <p>A TypeScript SDK for production chatbots on Telegram and WhatsApp: live-chat hand-off, broadcasts, AI responses, and an admin API with Supabase auth and role-based access.</p>
+            <a class="link" href="https://github.com/DataTank-BI-Solutions/omnichannel-chatbot-sdk" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="card reveal">
+            <p class="kicker">Obsidian theme</p>
+            <h3>Crestfall</h3>
+            <p>A dark Obsidian theme inspired by JetBrains’ Islands look, with a warm syntax palette, floating panels, seven task states and fifteen callout styles.</p>
+            <a class="link" href="https://github.com/code-alchemist-dev/obsidian-crestfall" rel="noopener">View on GitHub <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+        <article class="card lab reveal">
+          <p class="kicker">The lab</p>
+          <h3>A three-machine homelab</h3>
+          <p>Where I try ideas before they reach clients. It’s run the way I’d run production:</p>
+          <ul>
+            <li>Docker Compose services behind a reverse proxy with automatic HTTPS</li>
+            <li>Private remote access over a mesh VPN</li>
+            <li>Self-hosted CI runners sharing a heavy-job lock</li>
+            <li>Encrypted backups to three places, including off-site</li>
+            <li>Uptime and resource monitoring with phone alerts</li>
+            <li>Secrets kept in a secrets manager, never in files</li>
+          </ul>
         </article>
       </div>
     </section>
 
-    <!--==================== PROJECTS ====================-->
-    <section class="projects section" id="projects">
-      <h3 class="section__subtitle">
-        My <span>Jobs</span>
-      </h3>
-      <h2 class="section__title">
-        Recent Projects
-      </h2>
-      <div class="projects__container container grid">
-        <article class="projects__card">
-          <img src="assets/img/project-img-1.jpg" alt="projects image" class="projects__img" />
-          <div class="projects__modal">
-            <span class="projects__subtitle">Java • Spring Boot • Microservices</span>
-            <h2 class="projects__title">Movie Microservices</h2>
-            <a href="https://github.com/code-alchemist-dev/springboot-movie-microservices" target="_blank" class="projects__button">View on GitHub
-              <i class="ri-external-link-fill"></i>
-            </a>
-          </div>
-        </article>
-        <article class="projects__card">
-          <img src="assets/img/project-img-2.jpg" alt="projects image" class="projects__img" />
-          <div class="projects__modal">
-            <span class="projects__subtitle">Angular • Firebase • NgRx</span>
-            <h2 class="projects__title">Firebase NgRx CRUD</h2>
-            <a href="https://github.com/code-alchemist-dev/firebase-ngrx" target="_blank" class="projects__button">View on GitHub
-              <i class="ri-external-link-fill"></i>
-            </a>
-          </div>
-        </article>
-        <article class="projects__card">
-          <img src="assets/img/project-img-3.jpg" alt="projects image" class="projects__img" />
-          <div class="projects__modal">
-            <span class="projects__subtitle">TypeScript • NestJS</span>
-            <h2 class="projects__title">Rain Connect</h2>
-            <a href="https://github.com/code-alchemist-dev/rain-connect" target="_blank" class="projects__button">View on GitHub
-              <i class="ri-external-link-fill"></i>
-            </a>
-          </div>
-        </article>
-        <article class="projects__card">
-          <img src="assets/img/project-img-4.jpg" alt="projects image" class="projects__img" />
-          <div class="projects__modal">
-            <span class="projects__subtitle">Python • Web Scraping</span>
-            <h2 class="projects__title">Soccer Stats Scraper</h2>
-            <a href="https://github.com/code-alchemist-dev/soccer-stats-scrapper" target="_blank" class="projects__button">View on GitHub
-              <i class="ri-external-link-fill"></i>
-            </a>
-          </div>
-        </article>
-        <article class="projects__card">
-          <img src="assets/img/project-img-5.jpg" alt="projects image" class="projects__img" />
-          <div class="projects__modal">
-            <span class="projects__subtitle">Java • Spring Boot • Selenium</span>
-            <h2 class="projects__title">Cars Scraper API</h2>
-            <a href="https://github.com/code-alchemist-dev/cars-scraper-api" target="_blank" class="projects__button">View on GitHub
-              <i class="ri-external-link-fill"></i>
-            </a>
-          </div>
-        </article>
-        <article class="projects__card">
-          <img src="assets/img/project-img-6.jpg" alt="projects image" class="projects__img" />
-          <div class="projects__modal">
-            <span class="projects__subtitle">Documentation • Obsidian</span>
-            <h2 class="projects__title">Dev Note Vault</h2>
-            <a href="https://github.com/code-alchemist-dev/dev-note-vault" target="_blank" class="projects__button">View on GitHub
-              <i class="ri-external-link-fill"></i>
-            </a>
-          </div>
-        </article>
+    <!-- ================= JOURNEY ================= -->
+    <section id="journey" aria-labelledby="journey-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Journey</p>
+          <h2 id="journey-title">How I <em>got here</em></h2>
+        </div>
+        <ol class="timeline reveal">
+          <li class="now"><span class="when">Now</span><h3>Alchemia · independent</h3><p>Product builds for clients in Botswana and South Africa as delivery partner to DataTank BI Solutions.</p></li>
+          <li class="now"><span class="when">2020 – now</span><h3>Entelect · software engineer</h3><p>Placed at Standard Bank (Digital Lifestyle, then SBG Digital MyUpdates), and now at Capitec.</p></li>
+          <li><span class="when">2019 – 2020</span><h3>Inteleqt · software engineer</h3><p>Architecture and delivery for UD Trucks: Angular, .NET, SQL Server, Azure and Qlik Sense.</p></li>
+          <li><span class="when">2018 – 2019</span><h3>Retro Rabbit · software engineer</h3><p>Features and testing for OneCart: C#, .NET, Angular, SQL Server, OAuth2 and Azure.</p></li>
+          <li><span class="when">2019</span><h3>BSc Computer Science &amp; Informatics</h3><p>University of Johannesburg.</p></li>
+        </ol>
       </div>
     </section>
 
-    <!--==================== CONTACT ====================-->
-    <section class="contact section" id="contact">
-      <h3 class="section__subtitle">
-        Get In <span>Touch</span>
-      </h3>
+    <!-- ================= ABOUT ================= -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="container about">
+        <div class="portrait reveal">
+          <img src="/assets/img/bright-mabuza.webp" alt="Bright Mabuza" width="480" height="480" loading="lazy" decoding="async">
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Why <em>“Code Alchemist”</em></h2>
+          <p class="gap-top">Alchemy promised to turn base metal into gold. Software has a quieter version: take a tangle of requirements, legacy systems and half-answered questions, and turn it into something that <strong>works, lasts and can be trusted</strong>.</p>
+          <p>I’ve done that inside banks, where correctness and audit trails aren’t optional, and for smaller clients who need one engineer to own the whole stack. <strong>Alchemia</strong> is the name for that independent work.</p>
+          <p>Outside client work I run a small homelab, write things down in a knowledge vault, and keep refining how humans and AI agents can build software together without lowering the bar.</p>
+        </div>
+      </div>
+    </section>
 
-      <h2 class="section__title">
-        Contact Me
-      </h2>
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let’s build <em>something good</em></h2>
+          <p class="contact-intro">Tell me about your project, or the role you’re hiring for.</p>
+          <ul class="contact-links">
+            <li><a href="https://www.linkedin.com/in/bright-mabuza-08697383/" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9z"/></svg>LinkedIn</a></li>
+            <li><a href="https://github.com/code-alchemist-dev" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub · code-alchemist-dev</a></li>
+          </ul>
+        </div>
 
-      <div class="contact__container container grid">
-        <form action="" class="contact__form" id="contact-form">
-          <div class="contact__group">
-            <input type="text" name="user_name" required placeholder="Enter your name" class="contact__input">
-            <input type="email" name="user_email" required placeholder="Enter your email" class="contact__input">
+        <form class="reveal" name="contact" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="company" novalidate>
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hp"><label>Leave this empty <input name="company" tabindex="-1" autocomplete="off"></label></p>
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field">
+            <label for="f-topic">What’s it about?</label>
+            <select id="f-topic" name="topic">
+              <option>A project I’d like built</option>
+              <option>A role I’m hiring for</option>
+              <option>Something else</option>
+            </select>
           </div>
-
-          <textarea name="user_project" required placeholder="Enter your message" class="contact__input"></textarea>
-
-          <p class="contact__message" id="contact-message"></p>
-
-          <button type="submit" class="button contact__button">
-            Send Message
-          </button>
+          <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
+          <p class="privacy-note">I use your details only to reply to you. Messages are stored by the site host (Netlify) only so that I can reply.</p>
+          <div><button class="btn btn-gold" type="submit">Send message</button></div>
+          <p class="form-status" role="status" aria-live="polite"></p>
         </form>
-
       </div>
     </section>
   </main>
 
-  <!--==================== FOOTER ====================-->
-  <footer class="footer">
-    <div class="footer__container container grid">
-      <div>
-        <h1 class="footer__title">Bright <span>Mabuza</span>
-        </h1>
-        <h2 class="footer__education">
-          Software Engineer
-        </h2>
-      </div>
-
-      <div class="footer__social">
-        <a href="https://github.com/code-alchemist-dev" target="_blank" class="footer__social-link">
-          <i class="ri-github-fill"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/bright-mabuza-08697383/" target="_blank" class="footer__social-link">
-          <i class="ri-linkedin-box-fill"></i>
-        </a>
-      </div>
-
-      <span class="footer__copy">
-        &#169; Copyright code_alchemist. All rights reserved.
-      </span>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand" href="/" aria-label="Code Alchemist, home"><img src="/assets/brand/mark.svg" alt="" width="30" height="30"><span class="brand-name brand-name-sm">Code Alchemist</span></a>
+      <p>© <span data-year>2026</span> Bright Mabuza · Alchemia</p>
+      <ul>
+        <li><a href="/brand.html">Brand</a></li>
+        <li><a href="https://github.com/code-alchemist-dev" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/bright-mabuza-08697383/" rel="noopener">LinkedIn</a></li>
+      </ul>
     </div>
   </footer>
-
-  <!--========== SCROLL UP ==========-->
-  <a href="#home" class="scrollup" id="scroll-up">
-    <i class="ri-arrow-up-line"></i>
-  </a>
-  <!--=============== SCROLLREVEAL ===============-->
-  <script src="assets/js/scrollreveal.min.js"></script>
-
-  <!--=============== EMAIL JS ===============-->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
-
-  <!--=============== MAIN JS ===============-->
-  <script src="assets/js/main.js"></script>
 </body>
-
 </html>
