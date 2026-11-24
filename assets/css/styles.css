@@ -354,7 +354,7 @@ form { display: grid; gap: 16px; }
   .stage { border-right: 0; border-bottom: 1px solid var(--line); }
   .stage:nth-child(2) { border-bottom: 1px solid var(--line); }
   .stage:last-child { border-bottom: 0; }
-  .case { padding: 24px; }
+  .case { padding: 20px; }
   .brand-sub { display: none; }
   .swatches { grid-template-columns: 1fr 1fr; }
   .logo-stage { padding: 28px 16px; }
@@ -409,8 +409,10 @@ form { display: grid; gap: 16px; }
 .diagram figcaption { font: 500 12px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
 .dg-box { fill: var(--ink-3); stroke: #3a4352; stroke-width: 1; }
 .dg-core { stroke: var(--gold); fill: #1d1a14; }
-.dg-t { fill: var(--cream); font: 600 11.5px var(--sans); }
-.dg-s { fill: var(--muted); font: 500 10px var(--mono); }
+.dg-t { fill: var(--cream); font: 600 15px var(--sans); }
+.dg-s { fill: var(--muted); font: 500 12.5px var(--mono); }
+.dg-n { fill: var(--gold); font: italic 500 14px var(--serif); }
+.dg-dash { stroke-dasharray: 4 4; }
 .dg-ln { stroke: var(--gold-dim); stroke-width: 1.2; fill: none; }
 .dg-head { fill: var(--gold-dim); }
 
@@ -418,4 +420,10 @@ form { display: grid; gap: 16px; }
   .js .seal-mark > *, .js .seal-spark { animation: none; }
   .case, .service, .ent, .card { transition: none; }
   .service:hover, .ent:hover { transform: none; }
+}
+
+@media (max-width: 600px) {
+  /* Phones: let diagrams use the card's padding so the labels stay readable. */
+  .diagram { padding: 12px 4px 8px; margin: 22px -12px 0; }
+  .diagram figcaption { padding: 0 8px; line-height: 1.5; }
 }

@@ -23,7 +23,7 @@ The contact form uses **Netlify Forms**, so no keys are needed in the page. Spam
 
 ## Editing CSS or JS
 
-Pages load `styles.css` and `main.js` with a content hash (`?v=…`) so browsers can cache them for a year. After changing either file, run:
+Pages load `styles.css` and `main.js` with a content hash (`?v=…`) so browsers can cache them for a year. Netlify runs the stamping on every deploy (`netlify.toml`), so the live site is always correct. Run it locally too, so the committed pages match:
 
 ```sh
 python3 tools/stamp-assets.py
