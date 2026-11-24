@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360" fill="none" stroke="#D9AE57" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+  <!-- fire -->
+  <path d="M40 30 L58 62 H22 Z"/>
+  <!-- water -->
+  <path d="M190 40 H226 L208 72 Z"/>
+  <!-- air -->
+  <path d="M310 22 L328 54 H292 Z M297 44 H323"/>
+  <!-- earth -->
+  <path d="M95 150 H131 L113 182 Z M100 160 H126"/>
+  <!-- sun (gold) -->
+  <circle cx="260" cy="150" r="14"/><circle cx="260" cy="150" r="2" fill="#D9AE57"/>
+  <!-- mercury -->
+  <circle cx="40" cy="270" r="10"/><path d="M40 280 V298 M32 290 H48 M31 254 Q40 264 49 254"/>
+  <!-- salt -->
+  <circle cx="190" cy="275" r="14"/><path d="M176 275 H204"/>
+  <!-- code chevrons -->
+  <path d="M300 262 L290 272 L300 282 M320 262 L330 272 L320 282 M313 258 L307 286"/>
+</svg>

@@ -1,0 +1,6 @@
+# Static site, no framework. The build step only stamps the CSS/JS URLs with a
+# content hash, so the one-year immutable cache in _headers can never serve a
+# stale file. Pages are published from the repo root.
+[build]
+  publish = "."
+  command = "python3 tools/stamp-assets.py"

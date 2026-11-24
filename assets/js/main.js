@@ -1,102 +1,109 @@
-/*=============== SHOW MENU ===============*/
-const navMenu = document.getElementById('nav-menu'),
-  navClose = document.getElementById('nav-close'),
-  navToggle = document.getElementById('nav-toggle');
+// Code Alchemist: menu, active section, reveal, contact form. No dependencies.
+(function () {
+  'use strict';
+  document.documentElement.classList.add('js');
 
-/* Menu show */
-if(navToggle){
-navToggle.addEventListener('click', () =>{
-  navMenu.classList.add('show-menu')
-})
-}
+  // Footer year
+  document.querySelectorAll('[data-year]').forEach(function (el) {
+    el.textContent = String(new Date().getFullYear());
+  });
 
-/* Menu hidden */
-if(navClose){
-navClose.addEventListener('click', () =>{
-  navMenu.classList.remove('show-menu')
-})
-}
+  // Mobile menu: real button, aria-expanded, Escape closes and returns focus.
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('site-nav');
+  if (toggle && nav) {
+    var iOpen = toggle.querySelector('.i-open');
+    var iClose = toggle.querySelector('.i-close');
+    var setOpen = function (open) {
+      nav.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      if (iOpen && iClose) { iOpen.toggleAttribute('hidden', open); iClose.toggleAttribute('hidden', !open); }
+    };
+    toggle.addEventListener('click', function () {
+      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setOpen(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+    window.matchMedia('(min-width: 861px)').addEventListener('change', function (m) {
+      if (m.matches) setOpen(false);
+    });
+  }
 
-/*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll('.nav__link')
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-const linkAction = () =>{
-const navMenu = document.getElementById('nav-menu')
-// When we click on each nav__link, we remove the show-menu class
-navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
+  // Highlight the section in view.
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav-list a[href^="#"]'));
+  if ('IntersectionObserver' in window && links.length) {
+    var byId = {};
+    links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var a = byId[en.target.id];
+        if (!a || !en.isIntersecting) return;
+        links.forEach(function (l) { l.classList.remove('is-current'); });
+        a.classList.add('is-current');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(byId).forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) spy.observe(el);
+    });
+  }
 
-/*=============== ADD BLUR TO HEADER ===============*/
-const blurHeader = () =>{
-  const header = document.getElementById('header')
-  // Add a class if the bottom offset is greater than 50 of the viewport
-  this.scrollY >= 50 ? header.classList.add('blur-header') 
-                     : header.classList.remove('blur-header')
-}
-window.addEventListener('scroll', blurHeader)
+  // Reveal on scroll (skipped for reduced motion or old browsers).
+  var items = document.querySelectorAll('.reveal');
+  if (reduced || !('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    items.forEach(function (el) { io.observe(el); });
+  }
 
-/*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form')
-const contactMessage = document.getElementById('contact-message')
-
-const sendEmail = (e) => {
-  e.preventDefault()
-
-  emailjs.sendForm('service_561unuj', 'template_xj195bj', '#contact-form', 'BBFEuD-C9ZpsG7mUy')
-  .then(() => {
-    contactMessage.textContent = 'Message sent successfully!'
-    setTimeout(() => {
-      contactMessage.textContent = ''
-    }, 5000)
-    contactForm.requestFullscreen()
-  }, () => {
-    contactMessage.textContent = 'Message not sent successfully!'
-  })
-}
-
-contactForm.addEventListener('submit', sendEmail)
-
-/*=============== SHOW SCROLL UP ===============*/ 
-const scrollUp = () =>{
-	const scrollUp = document.getElementById('scroll-up')
-    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
-	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-						: scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
-
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll('section[id]')
-    
-const scrollActive = () =>{
-  	const scrollDown = window.scrollY
-
-	sections.forEach(current =>{
-		const sectionHeight = current.offsetHeight,
-			  sectionTop = current.offsetTop - 58,
-			  sectionId = current.getAttribute('id'),
-			  sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
-
-		if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-			sectionsClass.classList.add('active-link')
-		}else{
-			sectionsClass.classList.remove('active-link')
-		}                                                    
-	})
-}
-window.addEventListener('scroll', scrollActive)
-
-/*=============== SCROLL REVEAL ANIMATION ===============*/
-const sr = ScrollReveal({
-  origin: 'top',
-  distance: '60px',
-  duration: 2500,
-  delay: 400
-})
-
-sr.reveal(`.home__data, .home__social, .contact__container, .footer__container`)
-sr.reveal(`.home__image, .details__container`,{origin: 'bottom'})
-sr.reveal(`.about__data, .experience__data`,{origin: 'left'})
-sr.reveal(`.about__image, .experience__content`,{origin: 'right'})
-sr.reveal(`.services__card, .projects__card`,{interval: 50})
+  // Contact form: Netlify Forms via fetch, with an announced status.
+  var form = document.querySelector('form[name="contact"]');
+  if (form) {
+    form.noValidate = true; // JS shows its own message; without JS the browser validates.
+    var status = form.querySelector('.form-status');
+    var button = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      status.className = 'form-status';
+      if (!form.checkValidity()) {
+        status.textContent = 'Please fill in your name, a valid email and a message.';
+        status.classList.add('err');
+        var bad = form.querySelector(':invalid');
+        if (bad) bad.focus();
+        return;
+      }
+      button.disabled = true;
+      status.textContent = 'Sending…';
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function (res) {
+        if (!res.ok) throw new Error(String(res.status));
+        form.reset();
+        status.textContent = 'Thank you. Your message is on its way, and I’ll reply by email.';
+        status.classList.add('ok');
+      }).catch(function () {
+        status.textContent = 'Sorry, that didn’t send. Please try again, or message me on LinkedIn.';
+        status.classList.add('err');
+      }).finally(function () {
+        button.disabled = false;
+      });
+    });
+  }
+})();

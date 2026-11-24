@@ -1,56 +1,43 @@
-# Bright Mabuza's Portfolio UI
+# Code Alchemist · Alchemia
 
-## Overview
+The portfolio and brand site of **Bright Mabuza**, a full-stack software engineer in South Africa.
 
-This is the README file for Bright Mabuza's Portfolio UI project. The purpose of this project is to create a visually appealing and functional user interface for Bright Mabuza's portfolio website. The website will showcase Bright's skills, projects, and experience as a software engineer.
+Live: https://bright-mabuza.netlify.app/ (moving to its own domain).
 
-## Features
+## Structure
 
-- **Homepage**: Provides an introduction to Bright Mabuza and his skills.
-- **About Me**: A section where Bright Mabuza can share his background, education, and interests.
-- **Projects**: Displays a selection of Bright Mabuza's notable projects, including descriptions, technologies used, and links to GitHub repositories or live demos.
-- **Resume**: Allows visitors to view or download Bright Mabuza's resume/CV.
-- **Contact**: Provides contact information and a contact form for visitors to reach out to Bright Mabuza.
+A static site with no build step and no third-party requests.
 
-## Technologies Used
+| Path | What |
+|---|---|
+| `index.html` | The one-page portfolio |
+| `brand.html` | Brand guide: logo, colour, type and downloads |
+| `thanks.html`, `404.html` | Contact-form confirmation and the not-found page |
+| `assets/css/styles.css` | All styles and the brand tokens |
+| `assets/js/main.js` | Mobile menu, section highlight, reveal and contact form (vanilla JS) |
+| `assets/brand/` | Logo source files (SVG). The text in the lockups is outlined, so they need no fonts |
+| `assets/fonts/` | Self-hosted fonts (SIL OFL, see `assets/fonts/LICENSE.md`) |
+| `_headers` | Netlify security and caching headers (strict CSP: same-origin only, no inline scripts or styles) |
 
-- HTML5
-- CSS3
-- JavaScript
-- Git for version control
+The contact form uses **Netlify Forms**, so no keys are needed in the page. Spam is filtered by a honeypot field.
 
-## Installation
+## Editing CSS or JS
 
-1. Clone the repository to your local machine:
+Pages load `styles.css` and `main.js` with a content hash (`?v=…`) so browsers can cache them for a year. Netlify runs the stamping on every deploy (`netlify.toml`), so the live site is always correct. Run it locally too, so the committed pages match:
 
+```sh
+python3 tools/stamp-assets.py
 ```
-git clone https://github.com/code-alchemist-dev/alchemist-portfolio-ui.git
+
+## Run locally
+
+```sh
+python3 -m http.server 8080
 ```
 
-2. Open the `index.html` file in your web browser to view the website locally.
+The contact form only submits on Netlify.
 
-## Usage
+## Licence
 
-- Customize the content in the HTML files to reflect Bright Mabuza's personal information, skills, projects, etc.
-- Modify the CSS files to customize the styling of the website to match Bright Mabuza's preferences.
-- Implement any additional features or sections as desired.
-- Test the website thoroughly on different devices and browsers to ensure responsiveness and compatibility.
-
-## Contributing
-
-Contributions to the project are welcome! If you have any suggestions for improvements or new features, please feel free to fork the repository, make your changes, and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more information.
-
-## Acknowledgements
-
-- [Bootstrap](https://getbootstrap.com/) - Front-end framework
-- [Font Awesome](https://fontawesome.com/) - Icon library
-- [Unsplash](https://unsplash.com/) - Photography
-- [GitHub](https://github.com/) - Version control and project hosting
-
-## Contact
-
-For any inquiries or support related to this project, please contact Bright Mabuza at [email@example.com](mabuza6@gmail.com).
+- **Code** (HTML, CSS, JS): GPL-3.0, see `LICENSE`.
+- **Brand and content** (the Code Alchemist and Alchemia names and marks, the logo files, the text and the photo): © Bright Mabuza, all rights reserved.
