@@ -168,7 +168,7 @@
             <div class="case-body">
               <p><strong>A financial-wellness and debt-rehabilitation platform.</strong> Many working households lose most of their salary to loan deductions before payday. MyFinWell assesses each household’s position, has a trained analyst review it, and then guides rehabilitation, reintegration into formal credit, and protection.</p>
               <ul>
-                <li>Three Next.js front ends: the public website, a client portal (financial assessment, documents, payments with per-country VAT, recorded consents) and a staff panel, with a NestJS API and Supabase behind them.</li>
+                <li>Three Next.js front ends: a static public website, a client portal (financial assessment, documents, payments with per-country VAT, recorded consents) and a staff panel. The portal and panel work through a NestJS API and Supabase.</li>
                 <li>A full analyst pipeline: public application, review checklist and interviews, a single-use offer link, activation, case queues with due dates, and notifications that carry no client data.</li>
                 <li>A NestJS API on Supabase Postgres with 100+ versioned migrations, row-level security, a transactional email outbox, and rate limiting that falls back safely when Redis is down.</li>
                 <li>Privacy and data-protection pages, cookieless analytics, and security scanning on every pull request.</li>
