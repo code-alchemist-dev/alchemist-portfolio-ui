@@ -174,8 +174,21 @@ main > section.hero { border-top: 0; }
 ul.tags { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
 ul.tags li { font: 500 13px/1 var(--mono); color: var(--cream); background: var(--ink-3); border: 1px solid var(--line); border-radius: 6px; padding: 7px 9px; }
 .more-clients { margin-top: 36px; color: var(--muted); }
-.more-clients ul { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin: 14px 0 0; }
-.more-clients li { border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 14px; color: var(--cream); }
+/* Client logo wall: uniform cream tiles so logos keep their own colours on the dark page. */
+.logo-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 14px; list-style: none; padding: 0; margin: 16px 0 0; }
+.logo-wall li { display: flex; align-items: center; justify-content: center; height: 96px; padding: 14px 18px; background: var(--cream); border-radius: 14px; box-shadow: 0 1px 0 rgba(0,0,0,.25); }
+.logo-wall img { display: block; width: auto; max-width: 100%; height: auto; object-fit: contain; }
+.logo-wall .lg-techplo { max-height: 26px; }
+.logo-wall .lg-toshiba { max-height: 20px; }
+.logo-wall .lg-bbcbe { max-height: 52px; }
+.logo-wall .lg-dte { max-height: 40px; }
+.logo-wall .lg-text { font-family: var(--serif); font-size: 21px; font-weight: 600; line-height: 1.15; color: var(--ink); text-align: center; }
+@media (max-width: 600px) {
+  .logo-wall { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .logo-wall li { height: 84px; padding: 10px 8px; }
+  .logo-wall .lg-toshiba { max-height: 16px; }
+  .logo-wall .lg-text { font-size: 18px; }
+}
 
 /* ---------- Enterprise ---------- */
 .enterprise { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
